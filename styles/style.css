@@ -1,0 +1,310 @@
+:root{
+    --main-color: #faebd7;
+    --additional-color: #dbb88c;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+    overflow-x: hidden;
+    background: url('../images/pattern-promo.svg');
+}
+
+video{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.gradient{
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(to top, var(--main-color), transparent 20px);
+}
+
+a{
+    text-decoration-line: none;
+    color: black;
+}
+
+button{
+    background: var(--main-color);
+    border-radius: 25px;
+    font-size: 1.3em;
+    width: 200px;
+    height: 50px;
+}
+
+button:hover{
+    scale: 1.1 1.1;
+    cursor: pointer;
+}
+
+h1{ font-size: 3em; }
+
+p{ font-size: 1.2em; }
+
+li{ margin: 0 10px; font-size: 2em; }
+
+.first-promo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 110vh;
+    color: #f3b900;
+}
+
+.first-promo h1{ font-size: 6em; margin: 20px 0;}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.product{ height: 250px;    margin: 20px 50px; }
+
+.first-promo p{ font-size: 2.1em; margin: 0;}
+
+.ingridient .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+
+.content-container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ingridient .flex .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ingridient .flex .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingridient .flex .image {
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/*.product - строка 64
+url('../images/pattern_reviews.svg')*/
+
+.reviews{ background: radial-gradient(var(--additional-color), var(--main-color));
+box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+
+}
+
+.carousel{
+    background: var(--additional-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.triangle{
+    position: relative;
+    border: 10px solid transparent; 
+    top: 10px;
+}
+
+.right .triangle{
+    left: 15px; 
+    border-left: 15px solid var(--main-color);
+}
+.left .triangle{
+    right: 15px;
+    border-right: 15px solid var(--main-color);
+}
+
+.reviews .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.reviews .item {
+    width: 30%;
+    max-width: 13em;
+    background: antiquewhite;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas:    "A"
+                            "B"
+                            "C";
+    justify-items: center;
+    align-items: center;
+    text-align: justify;
+    margin: 75px 20px;
+}
+
+.reviews .image{
+    grid-area: "A";
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.user-name{
+    grid-area: "B";
+    margin: 5px;
+}
+
+.user-reviews{
+    grid-area: "C";
+    margin: 5px;
+}
+
+
+.second-promo .flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.second-promo .image{
+    max-height: 400px;
+    width: 350px;
+}
+
+.second-promo p{ font-size: 1.5em; }
+
+.second-promo ul{
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.form {
+    margin-top: 25px;
+    background: linear-gradient(to bottom, var(--additional-color), var(--main-color));
+}
+
+.form .grid{
+    display: grid;
+    grid-template-areas:    ". A ."
+                            "B . C"
+                            "D D I"
+                            "E E I";
+    justify-items: center;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.form h1{
+    grid-area: A;
+}
+
+.form .timer{
+    grid-area: B;
+}
+
+.form .price-container{
+    grid-area: C;
+    height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+.form .price{
+    position: absolute;
+}
+
+.form .price-container::before{
+    content: "1500 рублей";
+    width: 250px;
+    text-decoration: line-through;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    font-size: 0.8em;
+}
+
+.form .input{
+    width: 400px;
+    height: 25px;
+
+    position: relative;
+    top: 50px;
+}
+
+/*.form .input:focus+.hint{
+    visibility: visible;
+}*/
+
+.form .name{
+    grid-area: D;
+}
+
+.form .phone{
+    grid-area: E;
+}
+
+.form .hint{
+    position: relative;
+    bottom: 75px;
+    left: 60%;
+    width: 170px;
+    height: 70px;
+    display: flex;
+    visibility: 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    background: #e0c199;   
+}
+
+.form .hint::before{
+    content: ''; 
+    position: absolute;
+    top: 70px;
+    left: 117px;
+    border: 20px solid transparent; 
+    border-top: 20px solid #e0c199;
+}
+
+
+.form .product{
+    grid-area: I;
+}
+
+@media screen and (max-width: 700px) {
+
+    .ingridient .flex{
+        flex-direction: column;
+    }
+
+    .ingridient .flex .column{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .form .grid{
+        grid-template-areas: "A A"
+                             "B C"
+                             "D D"
+                             "E E"
+                             "I I";
+    }
+}
